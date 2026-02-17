@@ -4,6 +4,17 @@ import {
   ResponsiveContainer, LineChart, Line, XAxis, YAxis, CartesianGrid,
   Tooltip, Legend
 } from 'recharts';
+import { createClient } from '@supabase/supabase-js';
+
+// ============================================================================
+// SUPABASE CLIENT
+// ============================================================================
+
+const supabaseUrl = import.meta.env.VITE_SUPABASE_URL || '';
+const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY || '';
+const supabase = supabaseUrl && supabaseAnonKey
+  ? createClient(supabaseUrl, supabaseAnonKey)
+  : null;
 
 // ============================================================================
 // DESIGN SYSTEM
@@ -69,7 +80,7 @@ const BEHAVIORS = [
     icon: '\u{1F932}',
     title: 'Non-Transactional Physical Affection',
     short: 'Affection',
-    description: 'Touch that carries no agenda \u2014 presence expressed through the body.',
+    description: 'Touch that carries no agenda  -- presence expressed through the body.',
     questions: [
       {
         text: 'I touch my partner affectionately (hand on shoulder, forehead kiss, holding hands) without it being connected to wanting sex.',
@@ -87,19 +98,19 @@ const BEHAVIORS = [
     profiles: {
       strength: {
         name: 'Embodied Connector',
-        text: "You've built a second language of touch \u2014 one that says 'I see you' without asking for anything. Your partner's nervous system trusts your body because your body tells the truth: presence without transaction. This is rare. Protect it.",
+        text: "You've built a second language of touch  -- one that says 'I see you' without asking for anything. Your partner's nervous system trusts your body because your body tells the truth: presence without transaction. This is rare. Protect it.",
       },
       emerging: {
         name: 'Learning the Language',
-        text: "You're becoming aware that touch carries coded messages you didn't consciously write. Some of your affection lands clean. Some still carries freight. The awareness itself is the breakthrough \u2014 most men never get here.",
+        text: "You're becoming aware that touch carries coded messages you didn't consciously write. Some of your affection lands clean. Some still carries freight. The awareness itself is the breakthrough  -- most men never get here.",
       },
       default: {
         name: 'Coded Touch',
-        text: "Your touch has become a signal rather than a gift. Not because you're selfish \u2014 but because sexual intimacy may be the only touch vocabulary you were ever given. Her body learned to brace because your body learned to ask. This is fixable.",
+        text: "Your touch has become a signal rather than a gift. Not because you're selfish  -- but because sexual intimacy may be the only touch vocabulary you were ever given. Her body learned to brace because your body learned to ask. This is fixable.",
       },
       blind: {
         name: 'Touch Desert',
-        text: "Physical connection has narrowed to a single channel, or disappeared entirely. This isn't a character flaw \u2014 it's often the endpoint of a system where men were socialized out of casual affection by age 12. The channel needs rebuilding, not judging.",
+        text: "Physical connection has narrowed to a single channel, or disappeared entirely. This isn't a character flaw  -- it's often the endpoint of a system where men were socialized out of casual affection by age 12. The channel needs rebuilding, not judging.",
       },
     },
     habit_stacks: [
@@ -109,7 +120,7 @@ const BEHAVIORS = [
       },
       {
         trigger: 'Arriving home from work',
-        action: 'Before you put anything down, make physical contact \u2014 a real hug (6+ seconds), a kiss on her temple, a hand squeeze.',
+        action: 'Before you put anything down, make physical contact  -- a real hug (6+ seconds), a kiss on her temple, a hand squeeze.',
       },
       {
         trigger: 'Watching TV together',
@@ -118,10 +129,10 @@ const BEHAVIORS = [
     ],
     partner_practice: {
       title: 'The Touch Audit (Week 1-2)',
-      instruction: "Together, track every touch for 3 days using a simple tally on your phone. Mark each touch as A (affection), S (sexual), or P (practical/passing). Don't judge \u2014 just count. Then share the data over dinner. The numbers tell the story without anyone having to accuse.",
+      instruction: "Together, track every touch for 3 days using a simple tally on your phone. Mark each touch as A (affection), S (sexual), or P (practical/passing). Don't judge  -- just count. Then share the data over dinner. The numbers tell the story without anyone having to accuse.",
       frequency: 'One 3-day audit, then monthly check-in',
     },
-    mirror_question: 'When is the last time you touched her with absolutely no agenda \u2014 and she knew it?',
+    mirror_question: 'When is the last time you touched her with absolutely no agenda  -- and she knew it?',
   },
   {
     id: 'standards',
@@ -135,7 +146,7 @@ const BEHAVIORS = [
         anchors: ['Significantly less', 'Same or more'],
       },
       {
-        text: 'I actively pursue hobbies, interests, or learning that make me a more interesting person \u2014 separate from work.',
+        text: 'I actively pursue hobbies, interests, or learning that make me a more interesting person  -- separate from work.',
         anchors: ["I've let them all go", "I'm actively engaged"],
       },
       {
@@ -146,19 +157,19 @@ const BEHAVIORS = [
     profiles: {
       strength: {
         name: 'Self-Authored Man',
-        text: "You invest in yourself not as performance but as principle. You understand that self-maintenance is self-respect \u2014 and that self-respect is the foundation of attraction. She sees a man who hasn't stopped becoming.",
+        text: "You invest in yourself not as performance but as principle. You understand that self-maintenance is self-respect  -- and that self-respect is the foundation of attraction. She sees a man who hasn't stopped becoming.",
       },
       emerging: {
         name: 'Seasonal Builder',
-        text: "You have seasons of investment and seasons of surrender. The awareness is there \u2014 the consistency isn't yet. The gap isn't motivation. It's probably energy management and competing demands.",
+        text: "You have seasons of investment and seasons of surrender. The awareness is there  -- the consistency isn't yet. The gap isn't motivation. It's probably energy management and competing demands.",
       },
       default: {
         name: 'Comfort Drift',
-        text: "You've traded vitality for comfort so gradually you didn't notice the exchange. This isn't laziness \u2014 it's often the result of pouring all your maintenance energy into providing, fixing, and showing up for everyone else. Nothing was left for you.",
+        text: "You've traded vitality for comfort so gradually you didn't notice the exchange. This isn't laziness  -- it's often the result of pouring all your maintenance energy into providing, fixing, and showing up for everyone else. Nothing was left for you.",
       },
       blind: {
         name: 'Identity Erosion',
-        text: "The man she met has been slowly replaced by a role \u2014 employee, father, homeowner \u2014 without a self underneath. The hobbies are gone. The interests flattened. Not because you chose this, but because no one told you that losing yourself was the real danger.",
+        text: "The man she met has been slowly replaced by a role  -- employee, father, homeowner  -- without a self underneath. The hobbies are gone. The interests flattened. Not because you chose this, but because no one told you that losing yourself was the real danger.",
       },
     },
     habit_stacks: [
@@ -168,7 +179,7 @@ const BEHAVIORS = [
       },
       {
         trigger: 'Sunday evening planning',
-        action: "Schedule one activity this week that is yours \u2014 gym, reading, a project, a skill. Put it in the calendar like a meeting.",
+        action: "Schedule one activity this week that is yours  -- gym, reading, a project, a skill. Put it in the calendar like a meeting.",
       },
       {
         trigger: 'Scrolling social media',
@@ -177,7 +188,7 @@ const BEHAVIORS = [
     ],
     partner_practice: {
       title: 'The Attraction Conversation (Month 1)',
-      instruction: "Over dinner (not in bed), ask each other: 'What first attracted you to me? What version of me do you miss most?' Listen without defending. Take notes. The gap between who you were and who you've become isn't shame \u2014 it's data.",
+      instruction: "Over dinner (not in bed), ask each other: 'What first attracted you to me? What version of me do you miss most?' Listen without defending. Take notes. The gap between who you were and who you've become isn't shame  -- it's data.",
       frequency: "Once, then quarterly 'version check-ins'",
     },
     mirror_question: "If she described you to a stranger today, would the description sound like someone she'd want to meet?",
@@ -198,22 +209,22 @@ const BEHAVIORS = [
         anchors: ['I usually shut down', 'I stay engaged'],
       },
       {
-        text: 'I actively manage the emotional climate of our home \u2014 noticing disconnection, naming it, and addressing it.',
+        text: 'I actively manage the emotional climate of our home  -- noticing disconnection, naming it, and addressing it.',
         anchors: ['I leave that to her', 'I take co-ownership'],
       },
     ],
     profiles: {
       strength: {
         name: 'Emotional First Responder',
-        text: "You go first. Not perfectly \u2014 but first. You've built the muscle to sit in discomfort without fleeing, and to name what's happening before it calcifies. She trusts that tension will be addressed because you've proven you won't let it fester.",
+        text: "You go first. Not perfectly  -- but first. You've built the muscle to sit in discomfort without fleeing, and to name what's happening before it calcifies. She trusts that tension will be addressed because you've proven you won't let it fester.",
       },
       emerging: {
         name: 'Regulated Engager',
-        text: "You're learning to stay. Sometimes you still withdraw when your system floods, but you come back \u2014 and you come back faster than you used to. The return is the strength, even when the departure still happens.",
+        text: "You're learning to stay. Sometimes you still withdraw when your system floods, but you come back  -- and you come back faster than you used to. The return is the strength, even when the departure still happens.",
       },
       default: {
         name: 'Emotional Outsourcer',
-        text: "She carries the emotional weight of the relationship \u2014 initiating conversations, reading the room, translating feelings for both of you. Not because you don't care, but because your nervous system treats emotional engagement like a threat. Withdrawal feels like protection. It functions as abandonment.",
+        text: "She carries the emotional weight of the relationship  -- initiating conversations, reading the room, translating feelings for both of you. Not because you don't care, but because your nervous system treats emotional engagement like a threat. Withdrawal feels like protection. It functions as abandonment.",
       },
       blind: {
         name: 'Emotional Absence',
@@ -236,10 +247,10 @@ const BEHAVIORS = [
     ],
     partner_practice: {
       title: 'The 10-Minute Weather Report (Weekly)',
-      instruction: "Every Sunday evening, take 10 minutes each. Each person reports the 'weather' of the relationship that week: sunny, cloudy, stormy, foggy. No debate about the other person's weather \u2014 just reporting. Then one sentence each: 'What would help me this week is ___.'' This externalizes the emotional audit so no one has to 'bring things up.'",
-      frequency: 'Weekly \u2014 same day, same time, non-negotiable',
+      instruction: "Every Sunday evening, take 10 minutes each. Each person reports the 'weather' of the relationship that week: sunny, cloudy, stormy, foggy. No debate about the other person's weather  -- just reporting. Then one sentence each: 'What would help me this week is ___.'' This externalizes the emotional audit so no one has to 'bring things up.'",
+      frequency: 'Weekly  -- same day, same time, non-negotiable',
     },
-    mirror_question: 'When was the last time you went first into a difficult conversation \u2014 before she had to drag you there?',
+    mirror_question: 'When was the last time you went first into a difficult conversation  -- before she had to drag you there?',
   },
   {
     id: 'listening',
@@ -257,14 +268,14 @@ const BEHAVIORS = [
         anchors: ['Her pain makes me very uncomfortable', 'I can hold space'],
       },
       {
-        text: 'She would describe me as someone who truly hears her \u2014 not just her words, but her feelings.',
+        text: 'She would describe me as someone who truly hears her  -- not just her words, but her feelings.',
         anchors: ["She'd say I don't listen", "She'd say I really hear her"],
       },
     ],
     profiles: {
       strength: {
         name: 'The Witness',
-        text: "You've learned the hardest masculine skill: holding without fixing. You can sit in her pain and let it exist without your need to resolve it taking over. She feels heard \u2014 actually heard \u2014 and that is more valuable than any solution you could offer.",
+        text: "You've learned the hardest masculine skill: holding without fixing. You can sit in her pain and let it exist without your need to resolve it taking over. She feels heard  -- actually heard  -- and that is more valuable than any solution you could offer.",
       },
       emerging: {
         name: 'Recovering Fixer',
@@ -272,7 +283,7 @@ const BEHAVIORS = [
       },
       default: {
         name: 'Solution Machine',
-        text: "You hear 'problem' and your system activates: identify, analyze, solve. This isn't broken \u2014 it's how you were trained to show love. But she doesn't always need an engineer. Sometimes she needs a witness. Your discomfort with her unresolved emotion is driving the fixing, not her need for answers.",
+        text: "You hear 'problem' and your system activates: identify, analyze, solve. This isn't broken  -- it's how you were trained to show love. But she doesn't always need an engineer. Sometimes she needs a witness. Your discomfort with her unresolved emotion is driving the fixing, not her need for answers.",
       },
       blind: {
         name: 'Emotional Bypass',
@@ -296,7 +307,7 @@ const BEHAVIORS = [
     partner_practice: {
       title: 'The 5-Minute Download (Daily)',
       instruction: "Each person gets 5 minutes of uninterrupted talking. The listener's ONLY job is to say 'tell me more' or 'what was that like for you?' NO solutions. NO 'have you tried.' Set a timer. When it goes off, switch. This builds the listening muscle in a structured, low-stakes container.",
-      frequency: "Daily \u2014 during dinner prep, after kids' bedtime, or on a walk",
+      frequency: "Daily  -- during dinner prep, after kids' bedtime, or on a walk",
     },
     mirror_question: "Does she share less with you now than she used to? If so, ask yourself: did she stop talking, or did you stop listening?",
   },
@@ -305,14 +316,14 @@ const BEHAVIORS = [
     icon: '\u{1F4F5}',
     title: 'Presence vs. Distraction',
     short: 'Presence',
-    description: 'The discipline of being where you are \u2014 fully.',
+    description: 'The discipline of being where you are  -- fully.',
     questions: [
       {
         text: 'When I\'m home with my partner, my phone is put away and my attention is undivided during meaningful moments.',
         anchors: ['Phone is always in hand', 'I create phone-free zones'],
       },
       {
-        text: 'When she speaks to me, I give her my full attention \u2014 eye contact, body turned toward her, no multitasking.',
+        text: 'When she speaks to me, I give her my full attention  -- eye contact, body turned toward her, no multitasking.',
         anchors: ['I half-listen constantly', 'I stop and face her'],
       },
       {
@@ -323,19 +334,19 @@ const BEHAVIORS = [
     profiles: {
       strength: {
         name: 'The Anchor',
-        text: "When you're there, you're there. She doesn't compete with a screen for your attention. Your presence is felt \u2014 not just your proximity. In an attention economy designed to steal exactly this, you've built walls around what matters.",
+        text: "When you're there, you're there. She doesn't compete with a screen for your attention. Your presence is felt  -- not just your proximity. In an attention economy designed to steal exactly this, you've built walls around what matters.",
       },
       emerging: {
         name: 'Building Boundaries',
-        text: "You've started noticing the pull. Some zones are phone-free. Some moments get your full attention. The consistency isn't there yet, but the awareness that distraction is a choice \u2014 not a condition \u2014 has landed.",
+        text: "You've started noticing the pull. Some zones are phone-free. Some moments get your full attention. The consistency isn't there yet, but the awareness that distraction is a choice  -- not a condition  -- has landed.",
       },
       default: {
         name: 'Present But Absent',
-        text: "You're in the room but not in the moment. The screen is a coping mechanism, a stress valve, a default state \u2014 not a conscious choice. She's learned to expect the lag between her words and your attention. The distance isn't miles. It's pixels.",
+        text: "You're in the room but not in the moment. The screen is a coping mechanism, a stress valve, a default state  -- not a conscious choice. She's learned to expect the lag between her words and your attention. The distance isn't miles. It's pixels.",
       },
       blind: {
         name: 'Digital Ghost',
-        text: "Your body lives in the house. Your attention lives in the device. She's stopped competing for it because the device always wins. This isn't weakness \u2014 it's the result of the most sophisticated attention engineering in human history targeting your exact brain. But understanding the trap doesn't mean staying in it.",
+        text: "Your body lives in the house. Your attention lives in the device. She's stopped competing for it because the device always wins. This isn't weakness  -- it's the result of the most sophisticated attention engineering in human history targeting your exact brain. But understanding the trap doesn't mean staying in it.",
       },
     },
     habit_stacks: [
@@ -354,20 +365,20 @@ const BEHAVIORS = [
     ],
     partner_practice: {
       title: 'The Device Swap (Experiment)',
-      instruction: "For one weekend, swap phones for 2 hours (or just put both in a drawer). Notice what happens to the quality of conversation, the pacing, the silence. Debrief afterward: 'What was that like? What did you notice?' This isn't about shaming screen time \u2014 it's about making the invisible visible.",
+      instruction: "For one weekend, swap phones for 2 hours (or just put both in a drawer). Notice what happens to the quality of conversation, the pacing, the silence. Debrief afterward: 'What was that like? What did you notice?' This isn't about shaming screen time  -- it's about making the invisible visible.",
       frequency: 'One experiment, then build toward daily phone-free windows',
     },
-    mirror_question: 'If she were describing the last time you gave her your full, undivided attention \u2014 how far back would she have to go?',
+    mirror_question: 'If she were describing the last time you gave her your full, undivided attention  -- how far back would she have to go?',
   },
   {
     id: 'purpose',
     icon: '\u{1F3AF}',
     title: 'Purposeful Direction',
     short: 'Purpose',
-    description: 'A man with a trajectory \u2014 building something beyond the routine.',
+    description: 'A man with a trajectory  -- building something beyond the routine.',
     questions: [
       {
-        text: 'I have a clear sense of personal direction \u2014 goals, projects, or ambitions I\'m actively pursuing outside of work.',
+        text: 'I have a clear sense of personal direction  -- goals, projects, or ambitions I\'m actively pursuing outside of work.',
         anchors: ["I'm just getting through days", 'I have clear direction'],
       },
       {
@@ -382,19 +393,19 @@ const BEHAVIORS = [
     profiles: {
       strength: {
         name: 'The Builder',
-        text: "You have a pulse beyond the paycheck. Something you're building, becoming, or chasing that is yours. She sees a man in motion \u2014 not arriving, but traveling with intention. This is magnetic not because of the destination, but because of the aliveness.",
+        text: "You have a pulse beyond the paycheck. Something you're building, becoming, or chasing that is yours. She sees a man in motion  -- not arriving, but traveling with intention. This is magnetic not because of the destination, but because of the aliveness.",
       },
       emerging: {
         name: 'Reigniting',
-        text: "The pilot light is on. You feel the pull toward something more but haven't fully committed. The gap between 'I should' and 'I am' is where you live right now. The next step isn't a plan \u2014 it's a commitment.",
+        text: "The pilot light is on. You feel the pull toward something more but haven't fully committed. The gap between 'I should' and 'I am' is where you live right now. The next step isn't a plan  -- it's a commitment.",
       },
       default: {
         name: 'Routine Runner',
-        text: "Work, home, screen, sleep, repeat. The trajectory has flattened into a treadmill. This isn't apathy \u2014 it's often the result of systems that extracted your ambition and returned just enough comfort to keep you compliant. Purpose didn't die. It got buried under obligations.",
+        text: "Work, home, screen, sleep, repeat. The trajectory has flattened into a treadmill. This isn't apathy  -- it's often the result of systems that extracted your ambition and returned just enough comfort to keep you compliant. Purpose didn't die. It got buried under obligations.",
       },
       blind: {
         name: 'Stalled Engine',
-        text: "You've stopped asking 'what's next?' The question itself feels exhausting or pointless. She sees a man who has given up on himself \u2014 not because he's weak, but because the available purposes feel hollow and no one taught him to build his own.",
+        text: "You've stopped asking 'what's next?' The question itself feels exhausting or pointless. She sees a man who has given up on himself  -- not because he's weak, but because the available purposes feel hollow and no one taught him to build his own.",
       },
     },
     habit_stacks: [
@@ -414,16 +425,16 @@ const BEHAVIORS = [
     partner_practice: {
       title: 'The Dream Dinner (Monthly)',
       instruction: "Once a month, go to dinner (or cook together) with one rule: you can only talk about the future. Not logistics. Not kids' schedules. Dreams. What do you want the next 5 years to look like? What's one thing you'd do if money weren't a factor? What's one thing you've given up that you want back? Take turns. No reality-checking allowed during dinner.",
-      frequency: 'Monthly \u2014 put it in the calendar like a meeting',
+      frequency: 'Monthly  -- put it in the calendar like a meeting',
     },
-    mirror_question: "If your 18-year-old self could see your daily routine, would he recognize a man who's still building \u2014 or a man who stopped?",
+    mirror_question: "If your 18-year-old self could see your daily routine, would he recognize a man who's still building  -- or a man who stopped?",
   },
   {
     id: 'frame',
     icon: '\u{1F3DB}\uFE0F',
     title: 'Frame & Presence in Public',
     short: 'Frame',
-    description: 'The quiet confidence of a man who knows who he is \u2014 in any room.',
+    description: 'The quiet confidence of a man who knows who he is  -- in any room.',
     questions: [
       {
         text: 'In social situations, I share my genuine opinions even when they might be unpopular or create mild tension.',
@@ -434,32 +445,32 @@ const BEHAVIORS = [
         anchors: ['I avoid deciding anything', 'I lead when appropriate'],
       },
       {
-        text: 'My partner would say I carry myself with quiet confidence in social settings \u2014 not dominating, but not disappearing.',
+        text: 'My partner would say I carry myself with quiet confidence in social settings  -- not dominating, but not disappearing.',
         anchors: ["She'd say I shrink", "She'd say I hold my own"],
       },
     ],
     profiles: {
       strength: {
         name: 'Grounded Presence',
-        text: "You occupy space without performing it. You disagree without cruelty. You defer to expertise without losing yourself. She sees a man who knows who he is in any room \u2014 and that knowledge translates directly to safety. If he won't vanish in public, he won't vanish on her.",
+        text: "You occupy space without performing it. You disagree without cruelty. You defer to expertise without losing yourself. She sees a man who knows who he is in any room  -- and that knowledge translates directly to safety. If he won't vanish in public, he won't vanish on her.",
       },
       emerging: {
         name: 'Finding the Floor',
-        text: "You're learning the difference between aggression and assertion. Sometimes you still default to accommodation, but you're catching it faster. The muscle is building \u2014 you just need more reps in low-stakes environments.",
+        text: "You're learning the difference between aggression and assertion. Sometimes you still default to accommodation, but you're catching it faster. The muscle is building  -- you just need more reps in low-stakes environments.",
       },
       default: {
         name: 'The Accommodator',
-        text: "You've made yourself small to avoid friction. Agreeableness has become your brand. But she didn't fall in love with a man who agrees with everyone \u2014 she fell in love with a man who had something to say. You were taught that stepping back was virtue. Sometimes it is. When it's always, it's erosion.",
+        text: "You've made yourself small to avoid friction. Agreeableness has become your brand. But she didn't fall in love with a man who agrees with everyone  -- she fell in love with a man who had something to say. You were taught that stepping back was virtue. Sometimes it is. When it's always, it's erosion.",
       },
       blind: {
         name: 'The Invisible Man',
-        text: "You've disappeared in rooms. She watches other men occupy space while you shrink to accommodate. This isn't cowardice \u2014 you may have been explicitly taught that assertion is toxic. But there's a canyon between domination and presence, and you've fallen into it by trying to avoid the wrong side.",
+        text: "You've disappeared in rooms. She watches other men occupy space while you shrink to accommodate. This isn't cowardice  -- you may have been explicitly taught that assertion is toxic. But there's a canyon between domination and presence, and you've fallen into it by trying to avoid the wrong side.",
       },
     },
     habit_stacks: [
       {
         trigger: "Someone asks 'where should we eat?' or 'what should we do?'",
-        action: "Answer within 5 seconds with a real suggestion. Not 'I don't care' or 'whatever you want.' A choice. She doesn't need the perfect choice \u2014 she needs to see you make one.",
+        action: "Answer within 5 seconds with a real suggestion. Not 'I don't care' or 'whatever you want.' A choice. She doesn't need the perfect choice  -- she needs to see you make one.",
       },
       {
         trigger: "You're in a conversation and disagree",
@@ -475,7 +486,7 @@ const BEHAVIORS = [
       instruction: "For one full weekend, he makes every shared decision. Where to eat. What to do. What time to leave. She can veto for safety or hard boundaries, but the default is: he decides. Debrief Sunday night: How did it feel for each of you? Where was it freeing? Where was it uncomfortable? This surfaces the power dynamics you've both been navigating unconsciously.",
       frequency: "One experiment weekend, then monthly 'your weekend' swaps",
     },
-    mirror_question: 'In the last social situation you were in together \u2014 did she see someone she\'d choose again?',
+    mirror_question: 'In the last social situation you were in together  -- did she see someone she\'d choose again?',
   },
   {
     id: 'grievances',
@@ -493,14 +504,14 @@ const BEHAVIORS = [
         anchors: ['I suppress until I explode', 'I communicate steadily'],
       },
       {
-        text: "My partner would say she knows where she stands with me \u2014 that I don't hide what I'm feeling.",
+        text: "My partner would say she knows where she stands with me  -- that I don't hide what I'm feeling.",
         anchors: ["She'd say I'm a mystery/wall", "She'd say I'm transparent"],
       },
     ],
     profiles: {
       strength: {
         name: 'The Truth-Teller',
-        text: "You treat small fires like small fires \u2014 easier to put out now than after they've spread. She knows where she stands because you tell her. Not cruelly. Not constantly. But honestly. The relationship runs on clean fuel because you don't let contamination build.",
+        text: "You treat small fires like small fires  -- easier to put out now than after they've spread. She knows where she stands because you tell her. Not cruelly. Not constantly. But honestly. The relationship runs on clean fuel because you don't let contamination build.",
       },
       emerging: {
         name: 'Breaking the Seal',
@@ -518,7 +529,7 @@ const BEHAVIORS = [
     habit_stacks: [
       {
         trigger: 'Something bothers you (a comment, a pattern, a moment)',
-        action: "Within 24 hours, say: 'Hey, that thing earlier \u2014 it landed wrong for me. Can we talk about it?' Not as accusation. As offering.",
+        action: "Within 24 hours, say: 'Hey, that thing earlier  -- it landed wrong for me. Can we talk about it?' Not as accusation. As offering.",
       },
       {
         trigger: 'You notice yourself withdrawing or going cold',
@@ -532,9 +543,9 @@ const BEHAVIORS = [
     partner_practice: {
       title: 'The 24-Hour Rule (Ongoing)',
       instruction: "Both partners agree: if something bothers you, you have 24 hours to name it. After 24 hours, you lose the right to bring it up as a grievance (you can still share it as information, but not as ammunition). This creates urgency for honesty and prevents stockpiling. Start each naming with 'I noticed...' not 'You always...'",
-      frequency: 'Ongoing practice \u2014 becomes relationship culture over 60-90 days',
+      frequency: 'Ongoing practice  -- becomes relationship culture over 60-90 days',
     },
-    mirror_question: 'How many things are you carrying right now that she doesn\'t know about \u2014 and what is that weight doing to the space between you?',
+    mirror_question: 'How many things are you carrying right now that she doesn\'t know about  -- and what is that weight doing to the space between you?',
   },
 ];
 
@@ -546,7 +557,7 @@ const ARCHETYPES = [
   {
     id: 'conscious_architect',
     name: 'The Conscious Architect',
-    description: "You're operating with rare intentionality across most dimensions. The work now is maintenance, depth, and helping others. Your partnership has architecture \u2014 not just history.",
+    description: "You're operating with rare intentionality across most dimensions. The work now is maintenance, depth, and helping others. Your partnership has architecture  -- not just history.",
     condition: (cats) => cats.strength >= 6,
   },
   {
@@ -558,7 +569,7 @@ const ARCHETYPES = [
   {
     id: 'emerging_man',
     name: 'The Emerging Man',
-    description: "You're in the messy middle of transformation. Some areas are clicking. Others are still running on autopilot. This is exactly where growth happens \u2014 in the tension between who you've been and who you're choosing to become.",
+    description: "You're in the messy middle of transformation. Some areas are clicking. Others are still running on autopilot. This is exactly where growth happens  -- in the tension between who you've been and who you're choosing to become.",
     condition: (cats) => cats.strength >= 1 && (cats.strength + cats.emerging) >= 5,
   },
   {
@@ -570,7 +581,7 @@ const ARCHETYPES = [
   {
     id: 'unconscious_default',
     name: 'The Unconscious Default',
-    description: "Most of your relationship behaviors are running on programming you didn't write. This isn't failure \u2014 it's the starting line. The fact that you took this assessment means the autopilot is already cracking. What happens next is choice.",
+    description: "Most of your relationship behaviors are running on programming you didn't write. This isn't failure  -- it's the starting line. The fact that you took this assessment means the autopilot is already cracking. What happens next is choice.",
     condition: (cats) => (cats.default + cats.blind) >= 6,
   },
 ];
@@ -798,6 +809,22 @@ export default function ConsciousHusbandAssessment() {
     setHistory(prev => [...prev, entry]);
   };
 
+  // --- SAVE TO SUPABASE ---
+  const [saved, setSaved] = useState(false);
+  const saveToSupabase = async (source = answers, version = 'self') => {
+    if (!supabase) return;
+    const row = { version, archetype: archetype.id };
+    BEHAVIORS.forEach(b => {
+      b.questions.forEach((_, qi) => {
+        row[`${b.id}_q${qi + 1}`] = source[`${b.id}_${qi}`] || null;
+      });
+    });
+    try {
+      const { error } = await supabase.from('assessments').insert([row]);
+      if (!error) setSaved(true);
+    } catch {}
+  };
+
   // --- RESET ---
   const resetAssessment = () => {
     if (allAnswered) saveToHistory();
@@ -835,6 +862,8 @@ export default function ConsciousHusbandAssessment() {
     ] : []),
     { label: 'Practice', view: 'daily' },
     { label: 'Guide', view: 'guide' },
+    { label: 'Resources', view: 'resources' },
+    { label: 'Work With Me', view: 'services' },
     { label: 'About', view: 'about' },
   ];
 
@@ -920,7 +949,7 @@ export default function ConsciousHusbandAssessment() {
 
       <div style={{ ...S.card, borderLeft: `3px solid ${COLORS.gold}`, marginBottom: 40 }}>
         <p style={{ fontFamily: FONTS.body, fontSize: 17, color: COLORS.text, lineHeight: 1.8 }}>
-          This is not a quiz. This is a diagnostic mirror &mdash; a Working Genius-style assessment that maps 8 silent behaviors men repeat daily that erode attraction, respect, and connection. It doesn't just score. It categorizes, names, and provides a path forward.
+          This is not a quiz. This is a diagnostic mirror  -- a Working Genius-style assessment that maps 8 silent behaviors men repeat daily that erode attraction, respect, and connection. It doesn't just score. It categorizes, names, and provides a path forward.
         </p>
       </div>
 
@@ -928,9 +957,9 @@ export default function ConsciousHusbandAssessment() {
       <div style={{ display: 'grid', gap: 16, marginBottom: 48 }}>
         {[
           { icon: '\u{1F4CA}', text: '24 questions across 8 behavior dimensions with custom scoring' },
-          { icon: '\u{1F3AF}', text: '32 named profiles \u2014 your specific pattern identified and named' },
+          { icon: '\u{1F3AF}', text: '32 named profiles  -- your specific pattern identified and named' },
           { icon: '\u{1F9E9}', text: 'Habit-stacking action plans attached to your existing daily routines' },
-          { icon: '\u{1F91D}', text: 'Partner practices designed for real-world integration \u2014 not therapy homework' },
+          { icon: '\u{1F91D}', text: 'Partner practices designed for real-world integration  -- not therapy homework' },
           { icon: '\u{1FA9E}', text: 'Mirror questions that cut to the truth' },
         ].map((item, i) => (
           <div key={i} style={{ ...S.card, display: 'flex', gap: 16, alignItems: 'flex-start', padding: 20 }}>
@@ -1169,7 +1198,7 @@ export default function ConsciousHusbandAssessment() {
       })}
 
       {/* Priority panel */}
-      <h3 style={{ ...S.subheading, marginTop: 40, marginBottom: 16 }}>START HERE &mdash; YOUR TOP 3 PRIORITIES</h3>
+      <h3 style={{ ...S.subheading, marginTop: 40, marginBottom: 16 }}>START HERE  -- YOUR TOP 3 PRIORITIES</h3>
       {priorities.map((b, i) => {
         const score = getScore(b.id);
         const cat = getCategory(score);
@@ -1198,9 +1227,29 @@ export default function ConsciousHusbandAssessment() {
       })}
 
       {/* Actions */}
-      <div style={{ display: 'flex', gap: 16, justifyContent: 'center', padding: '40px 0 80px', flexWrap: 'wrap' }}>
+      {/* Save to Supabase */}
+      {supabase && !saved && (
+        <div style={{ textAlign: 'center', marginTop: 24 }}>
+          <button onClick={() => saveToSupabase()} style={{ ...S.buttonGhost, borderColor: COLORS.strength, color: COLORS.strength }}>
+            Save Results Securely
+          </button>
+          <p style={{ color: COLORS.muted, fontSize: 11, fontFamily: FONTS.label, marginTop: 8 }}>Anonymous. No account needed. Enables progress tracking.</p>
+        </div>
+      )}
+      {saved && (
+        <p style={{ textAlign: 'center', color: COLORS.strength, fontFamily: FONTS.label, fontSize: 12, marginTop: 24 }}>
+          {'\u2713'} Results saved
+        </p>
+      )}
+
+      <div style={{ display: 'flex', gap: 16, justifyContent: 'center', padding: '40px 0 20px', flexWrap: 'wrap' }}>
         <button onClick={resetAssessment} style={S.buttonGhost}>Retake Assessment</button>
         <button onClick={() => navigate('daily')} style={S.button}>Start Daily Practice &rarr;</button>
+      </div>
+      <div style={{ textAlign: 'center', paddingBottom: 80 }}>
+        <button onClick={() => navigate('services')} style={{ ...S.navLink, color: COLORS.gold, fontSize: 13 }}>
+          Want guided support? Explore coaching options &rarr;
+        </button>
       </div>
     </div>
   );
@@ -1399,7 +1448,7 @@ export default function ConsciousHusbandAssessment() {
         </div>
       ) : compareMode === 'entry' ? (
         <>
-          <h3 style={{ ...S.subheading, marginBottom: 16 }}>PARTNER ASSESSMENT &mdash; BEHAVIOR {partnerBehaviorIdx + 1} OF 8</h3>
+          <h3 style={{ ...S.subheading, marginBottom: 16 }}>PARTNER ASSESSMENT  -- BEHAVIOR {partnerBehaviorIdx + 1} OF 8</h3>
           {/* Behavior dots */}
           <div style={{ display: 'flex', justifyContent: 'center', gap: 10, marginBottom: 32 }}>
             {BEHAVIORS.map((b, i) => {
@@ -1851,7 +1900,7 @@ export default function ConsciousHusbandAssessment() {
         <p style={{ ...S.label, color: COLORS.gold, letterSpacing: 6, marginBottom: 16 }}>THE GUIDE</p>
         <h1 style={{ ...S.heading, fontSize: 32, marginBottom: 8 }}>The 8 Behaviors</h1>
         <p style={{ color: COLORS.secondary, fontSize: 15, maxWidth: 560, margin: '0 auto' }}>
-          Eight silent behaviors men repeat daily that erode attraction, respect, and connection. Each one is a mirror &mdash; and a doorway.
+          Eight silent behaviors men repeat daily that erode attraction, respect, and connection. Each one is a mirror  -- and a doorway.
         </p>
         <hr style={{ ...S.goldLine, maxWidth: 80, margin: '24px auto' }} />
       </div>
@@ -1887,13 +1936,13 @@ export default function ConsciousHusbandAssessment() {
       <div style={{ ...S.cardGold }}>
         <h3 style={{ ...S.heading, fontSize: 22, marginBottom: 16 }}>How This Assessment Came to Be</h3>
         <p style={{ fontFamily: FONTS.body, color: COLORS.text, fontSize: 16, lineHeight: 1.8, marginBottom: 16 }}>
-          It started with a viral thread. Helen Casanova posted a list of behaviors women observe in their husbands &mdash; things that silently erode attraction. It hit 3.4 million views. The comments were a war zone: men defensive, women validated, everyone talking past each other.
+          It started with a viral thread. Helen Casanova posted a list of behaviors women observe in their husbands  -- things that silently erode attraction. It hit 3.4 million views. The comments were a war zone: men defensive, women validated, everyone talking past each other.
         </p>
         <p style={{ fontFamily: FONTS.body, color: COLORS.text, fontSize: 16, lineHeight: 1.8, marginBottom: 16 }}>
           The problem wasn't the content. The content was largely accurate. The problem was the frame: accusatory, gendered, and designed to produce shame rather than change. What if you could take the same observations and run them through a both/and analysis? What if, instead of blame, you offered a diagnostic mirror?
         </p>
         <p style={{ fontFamily: FONTS.body, color: COLORS.text, fontSize: 16, lineHeight: 1.8 }}>
-          That's what this assessment is. It takes 8 behaviors that research and real-world observation confirm matter &mdash; and instead of shaming men for where they fall short, it categorizes, names, and provides a path forward. Because choice is the alpha. Not the unconscious reactivity of the everyday.
+          That's what this assessment is. It takes 8 behaviors that research and real-world observation confirm matter  -- and instead of shaming men for where they fall short, it categorizes, names, and provides a path forward. Because choice is the alpha. Not the unconscious reactivity of the everyday.
         </p>
       </div>
 
@@ -1903,10 +1952,10 @@ export default function ConsciousHusbandAssessment() {
           {[
             { label: 'Dimensions', value: '8 behavior categories mapped from relationship research and clinical observation' },
             { label: 'Scoring', value: '4-tier system: Conscious Strength (13-15), Emerging Awareness (10-12), Unconscious Default (6-9), Active Blind Spot (3-5)' },
-            { label: 'Profiles', value: '32 named profiles &mdash; 4 tiers across 8 behaviors &mdash; each with narrative, not just a number' },
-            { label: 'Action System', value: 'Habit-stacking methodology &mdash; new behaviors attached to existing daily routines for maximum adoption' },
+            { label: 'Profiles', value: '32 named profiles  -- 4 tiers across 8 behaviors  -- each with narrative, not just a number' },
+            { label: 'Action System', value: 'Habit-stacking methodology  -- new behaviors attached to existing daily routines for maximum adoption' },
             { label: 'Partner Integration', value: 'Practices designed for real-world couples, not therapy homework. Built on reciprocity, not prescription.' },
-            { label: 'Archetypes', value: '5 overall profiles based on category distribution, not raw totals &mdash; pattern recognition over point counting' },
+            { label: 'Archetypes', value: '5 overall profiles based on category distribution, not raw totals  -- pattern recognition over point counting' },
           ].map((item, i) => (
             <div key={i} style={{ borderLeft: `2px solid ${COLORS.gold}33`, paddingLeft: 16 }}>
               <p style={{ ...S.label, color: COLORS.gold, fontSize: 10, marginBottom: 4 }}>{item.label}</p>
@@ -1923,7 +1972,7 @@ export default function ConsciousHusbandAssessment() {
           Director of Educational Equity, Brooklyn Center Community Schools
         </p>
         <p style={{ fontFamily: FONTS.body, color: COLORS.text, fontSize: 16, lineHeight: 1.8, marginBottom: 16 }}>
-          Creator of the Interior Architecture of Transformation book series and assessment suite. Joshua builds diagnostic tools that map the invisible structures &mdash; the beliefs, habits, and unconscious patterns &mdash; that drive human behavior in relationships, leadership, and organizational systems.
+          Creator of the Interior Architecture of Transformation book series and assessment suite. Joshua builds diagnostic tools that map the invisible structures  -- the beliefs, habits, and unconscious patterns  -- that drive human behavior in relationships, leadership, and organizational systems.
         </p>
         <p style={{ fontFamily: FONTS.body, color: COLORS.text, fontSize: 16, lineHeight: 1.8 }}>
           The Conscious Husband Assessment is part of the Interior Architecture ecosystem: a collection of instruments designed to make the unconscious conscious, the invisible visible, and the default intentional.
@@ -1942,6 +1991,299 @@ export default function ConsciousHusbandAssessment() {
   );
 
   // ============================================================================
+  // RESOURCES VIEW
+  // ============================================================================
+  const RESOURCES = [
+    {
+      category: 'Books',
+      items: [
+        { title: 'Hold Me Tight', author: 'Dr. Sue Johnson', desc: 'The science of emotional bonding and attachment in adult relationships. The foundation for understanding why connection breaks down and how to repair it.' },
+        { title: 'The Seven Principles for Making Marriage Work', author: 'Dr. John Gottman', desc: 'Decades of research distilled into actionable principles. Gottman can predict divorce with 94% accuracy. This book shows you what the successful couples do differently.' },
+        { title: 'No More Mr. Nice Guy', author: 'Dr. Robert Glover', desc: 'For men who have built their identity around accommodation and people-pleasing. Directly relevant to Frame, Grievances, and Emotional Leadership.' },
+        { title: 'Atomic Habits', author: 'James Clear', desc: 'The science behind the habit-stacking methodology used in this assessment. If you want to understand why "trigger + action" works, start here.' },
+        { title: 'The Way of the Superior Man', author: 'David Deida', desc: 'Polarizing but valuable. Explores masculine purpose, presence, and the tension between comfort and growth. Directly relevant to Purpose and Frame.' },
+        { title: 'Mating in Captivity', author: 'Esther Perel', desc: 'Why desire fades in long-term relationships and what to do about it. Challenges the idea that security and passion naturally coexist.' },
+        { title: 'Nonviolent Communication', author: 'Marshall Rosenberg', desc: 'The communication framework underneath Listening, Grievances, and Emotional Leadership. Learn to express needs without blame.' },
+        { title: 'Running on Empty', author: 'Dr. Jonice Webb', desc: 'Childhood emotional neglect and its impact on adult relationships. If you scored low on Emotional Leadership, this book will show you why.' },
+      ],
+    },
+    {
+      category: 'Research & Articles',
+      items: [
+        { title: 'The Four Horsemen of the Apocalypse', author: 'The Gottman Institute', desc: 'Criticism, contempt, defensiveness, and stonewalling. Learn to recognize the patterns that predict relationship failure.' },
+        { title: 'Attachment Theory in Adult Relationships', author: 'Dr. Amir Levine & Rachel Heller', desc: 'Understanding anxious, avoidant, and secure attachment styles. Your attachment style shapes every behavior in this assessment.' },
+        { title: 'The Still Face Experiment', author: 'Dr. Edward Tronick', desc: 'A powerful demonstration of what happens when presence disappears. Watch this if you scored low on Presence.' },
+        { title: 'Emotional Labor: The Invisible Work', author: 'Gemma Hartley', desc: 'Understanding the mental load and emotional labor dynamic. Essential context for Emotional Leadership and Grievances.' },
+      ],
+    },
+    {
+      category: 'Podcasts & Talks',
+      items: [
+        { title: 'Where Should We Begin?', author: 'Esther Perel', desc: 'Real couples therapy sessions. Hearing other couples navigate the exact patterns this assessment measures is transformative.' },
+        { title: 'The Art of Manliness', author: 'Brett McKay', desc: 'Practical episodes on purpose, standards, frame, and what it means to be a man building something with intention.' },
+        { title: 'Brene Brown on Vulnerability', author: 'TED Talk', desc: 'The talk that reframed vulnerability as strength, not weakness. Essential for men working on Emotional Leadership and Grievances.' },
+      ],
+    },
+    {
+      category: 'Tools & Practices',
+      items: [
+        { title: 'The Gottman Card Decks App', author: 'The Gottman Institute', desc: 'Free app with conversation starters, date questions, and relationship-building exercises. A practical companion to the Partner Practices in this assessment.' },
+        { title: 'Insight Timer', author: 'Meditation App', desc: 'Free meditation and mindfulness app. Start with 5 minutes daily. Directly supports Presence and Emotional Leadership.' },
+        { title: 'Morning Pages', author: 'Julia Cameron', desc: 'Write three pages longhand every morning. No editing, no stopping. A powerful practice for men who struggle to identify what they feel.' },
+      ],
+    },
+  ];
+
+  const ResourcesView = (
+    <div style={S.container}>
+      <div style={{ padding: '48px 0 0', textAlign: 'center' }}>
+        <p style={{ ...S.label, color: COLORS.gold, letterSpacing: 6, marginBottom: 16 }}>RESOURCES</p>
+        <h1 style={{ ...S.heading, fontSize: 32, marginBottom: 8 }}>Go Deeper</h1>
+        <p style={{ color: COLORS.secondary, fontSize: 15, maxWidth: 560, margin: '0 auto' }}>
+          Curated readings, research, and tools that map directly to the 8 behaviors. Start with what speaks to your growth edge.
+        </p>
+        <hr style={{ ...S.goldLine, maxWidth: 80, margin: '24px auto' }} />
+      </div>
+
+      {RESOURCES.map((section, si) => (
+        <div key={si}>
+          <h3 style={{ ...S.subheading, marginTop: si === 0 ? 16 : 40, marginBottom: 16 }}>{section.category.toUpperCase()}</h3>
+          {section.items.map((item, i) => (
+            <div key={i} style={{ ...S.card, padding: 22 }}>
+              <h4 style={{ fontFamily: FONTS.heading, fontWeight: 600, color: COLORS.text, fontSize: 16, marginBottom: 2 }}>
+                {item.title}
+              </h4>
+              <p style={{ ...S.label, fontSize: 10, color: COLORS.gold, marginBottom: 10 }}>{item.author}</p>
+              <p style={{ fontFamily: FONTS.body, color: COLORS.secondary, fontSize: 14, lineHeight: 1.7, margin: 0 }}>
+                {item.desc}
+              </p>
+            </div>
+          ))}
+        </div>
+      ))}
+
+      <div style={{ textAlign: 'center', padding: '40px 0 80px' }}>
+        <p style={{ color: COLORS.muted, fontFamily: FONTS.label, fontSize: 12, marginBottom: 20 }}>
+          Ready to go beyond reading?
+        </p>
+        <button onClick={() => navigate('services')} style={S.button}>Explore Coaching Options</button>
+      </div>
+    </div>
+  );
+
+  // ============================================================================
+  // SERVICES / WORK WITH ME VIEW
+  // ============================================================================
+
+  const SERVICES = [
+    {
+      tier: 'free',
+      name: 'Free Consultation',
+      price: 'Free',
+      interval: '',
+      desc: 'A 20-minute introductory conversation. No pitch, no pressure. We look at your assessment results together and identify the one behavior shift that would create the most movement in your relationship right now.',
+      features: [
+        '20-minute video call',
+        'Assessment results review',
+        'One priority behavior identified',
+        'Personalized first action step',
+        'No commitment required',
+      ],
+      cta: 'Book Free Chat',
+      accent: COLORS.strength,
+    },
+    {
+      tier: 'single',
+      name: 'Deep Dive Session',
+      price: '$150',
+      interval: 'one-time',
+      desc: 'A focused 60-minute session built around your assessment results. We go deep on your lowest-scoring behaviors, build a custom habit-stack plan, and address the specific dynamics in your relationship.',
+      features: [
+        '60-minute one-on-one session',
+        'Full assessment breakdown',
+        'Custom habit-stack action plan',
+        'Partner practice recommendations',
+        'Recording provided',
+        'One follow-up email',
+      ],
+      cta: 'Book a Session',
+      accent: COLORS.emerging,
+    },
+    {
+      tier: 'monthly',
+      name: 'Monthly Intensive',
+      price: '$497',
+      interval: '/month',
+      desc: 'Four sessions over 30 days. We work through your priority behaviors systematically, building one habit-stack per week. Includes mid-week check-ins and direct messaging support between sessions.',
+      features: [
+        '4 weekly sessions (60 min each)',
+        'Personalized behavior plan',
+        'Weekly habit-stack implementation',
+        'Mid-week text/voice check-ins',
+        'Partner session option (one included)',
+        'Monthly reassessment + progress tracking',
+      ],
+      cta: 'Start Monthly',
+      accent: COLORS.gold,
+    },
+    {
+      tier: 'quarterly',
+      name: 'Quarterly Transformation',
+      price: '$1,197',
+      interval: '/quarter',
+      desc: 'The full arc. 12 sessions over 90 days covering all 8 behaviors. This is where real pattern change happens. Includes partner sessions, reassessments, and the support structure to make shifts permanent. Commitment renews quarterly.',
+      features: [
+        '12 sessions over 90 days',
+        'All 8 behaviors addressed systematically',
+        'Bi-weekly partner sessions included',
+        'Monthly reassessment with trend analysis',
+        'Priority messaging support',
+        'Custom resource library',
+        'Quarterly renewal decisions',
+        'Save $294 vs. monthly',
+      ],
+      cta: 'Begin Transformation',
+      accent: COLORS.goldBright,
+      featured: true,
+    },
+    {
+      tier: 'ongoing',
+      name: 'Ongoing Partnership',
+      price: '$397',
+      interval: '/month (after quarter)',
+      desc: 'For men who have completed a quarterly transformation and want sustained accountability. Sessions shift from intensive work to maintenance, deepening, and navigating new challenges as they arise. Flexible month-to-month after initial quarter.',
+      features: [
+        '2 sessions per month (60 min)',
+        'Ongoing reassessment tracking',
+        'Evolving focus based on life stage',
+        'Partner sessions as needed',
+        'Priority messaging support',
+        'Cancel or pause anytime',
+        'Quarterly check-in reviews',
+      ],
+      cta: 'Continue the Work',
+      accent: COLORS.secondary,
+    },
+  ];
+
+  const ServicesView = (
+    <div style={S.container}>
+      <div style={{ padding: '48px 0 0', textAlign: 'center' }}>
+        <p style={{ ...S.label, color: COLORS.gold, letterSpacing: 6, marginBottom: 16 }}>WORK WITH ME</p>
+        <h1 style={{ ...S.heading, fontSize: 32, marginBottom: 8 }}>From Assessment to Architecture</h1>
+        <p style={{ color: COLORS.secondary, fontSize: 16, maxWidth: 600, margin: '0 auto', lineHeight: 1.7 }}>
+          The assessment shows you where you are. Coaching helps you build where you want to go. Every engagement starts with your results and ends with measurable movement.
+        </p>
+        <hr style={{ ...S.goldLine, maxWidth: 80, margin: '24px auto' }} />
+      </div>
+
+      {/* Flow explanation */}
+      <div style={{ ...S.cardGold, marginBottom: 40 }}>
+        <h3 style={{ ...S.heading, fontSize: 20, marginBottom: 12 }}>How It Works</h3>
+        <div style={{ display: 'grid', gap: 16 }}>
+          {[
+            { step: '01', text: 'Take the assessment. See where you stand across all 8 behaviors.' },
+            { step: '02', text: 'Book a free consultation. We review your results and identify your priority.' },
+            { step: '03', text: 'Choose your depth. Single session, monthly intensive, or quarterly transformation.' },
+            { step: '04', text: 'Build the habits. Weekly sessions, habit-stacking, partner practices.' },
+            { step: '05', text: 'Reassess quarterly. Track your movement. Adjust your plan. Decide your next step.' },
+          ].map((item, i) => (
+            <div key={i} style={{ display: 'flex', gap: 14, alignItems: 'flex-start' }}>
+              <span style={{ fontFamily: FONTS.heading, fontWeight: 700, color: COLORS.gold, fontSize: 14, flexShrink: 0, width: 28 }}>{item.step}</span>
+              <p style={{ fontFamily: FONTS.body, color: COLORS.text, fontSize: 15, margin: 0, lineHeight: 1.6 }}>{item.text}</p>
+            </div>
+          ))}
+        </div>
+        <div style={{ marginTop: 20, padding: '12px 16px', background: COLORS.surface, borderRadius: 8 }}>
+          <p style={{ fontFamily: FONTS.body, color: COLORS.secondary, fontSize: 14, margin: 0, lineHeight: 1.6 }}>
+            Every tier flows into the next. Start with a free chat. Move to a single session. If the work resonates, step into monthly or quarterly. Commitments renew on quarterly cycles. You always decide what comes next.
+          </p>
+        </div>
+      </div>
+
+      {/* Service cards */}
+      {SERVICES.map((svc, i) => (
+        <div key={i} style={{
+          ...S.card,
+          border: svc.featured ? `2px solid ${COLORS.gold}` : `1px solid ${COLORS.elevated}`,
+          position: 'relative',
+          overflow: 'hidden',
+        }}>
+          {svc.featured && (
+            <div style={{
+              position: 'absolute', top: 16, right: -32, background: COLORS.gold, color: COLORS.navy,
+              fontFamily: FONTS.label, fontWeight: 700, fontSize: 10, letterSpacing: 2,
+              padding: '4px 40px', transform: 'rotate(45deg)', textTransform: 'uppercase',
+            }}>
+              BEST VALUE
+            </div>
+          )}
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 12, flexWrap: 'wrap', gap: 8 }}>
+            <div>
+              <h3 style={{ fontFamily: FONTS.heading, fontWeight: 600, color: COLORS.text, fontSize: 20, marginBottom: 2 }}>{svc.name}</h3>
+              {svc.tier !== 'free' && (
+                <span style={{ ...S.label, fontSize: 10, color: svc.accent }}>{svc.tier.toUpperCase()}</span>
+              )}
+            </div>
+            <div style={{ textAlign: 'right' }}>
+              <span style={{ fontFamily: FONTS.heading, fontWeight: 700, fontSize: 32, color: svc.accent }}>{svc.price}</span>
+              {svc.interval && <span style={{ color: COLORS.muted, fontSize: 13, marginLeft: 4 }}>{svc.interval}</span>}
+            </div>
+          </div>
+          <p style={{ fontFamily: FONTS.body, color: COLORS.secondary, fontSize: 15, lineHeight: 1.7, marginBottom: 20 }}>{svc.desc}</p>
+          <div style={{ display: 'grid', gap: 8, marginBottom: 24 }}>
+            {svc.features.map((f, fi) => (
+              <div key={fi} style={{ display: 'flex', gap: 10, alignItems: 'flex-start' }}>
+                <span style={{ color: svc.accent, fontSize: 14, flexShrink: 0, marginTop: 2 }}>{'\u2713'}</span>
+                <span style={{ fontFamily: FONTS.body, color: COLORS.text, fontSize: 14 }}>{f}</span>
+              </div>
+            ))}
+          </div>
+          <button style={{
+            ...svc.tier === 'free' ? S.buttonGhost : S.button,
+            width: '100%',
+            background: svc.tier === 'free' ? 'transparent' : svc.accent,
+            borderColor: svc.accent,
+            color: svc.tier === 'free' ? svc.accent : COLORS.navy,
+          }}>
+            {svc.cta}
+          </button>
+        </div>
+      ))}
+
+      {/* FAQ / Flexibility note */}
+      <div style={{ ...S.card, marginTop: 24, border: `1px solid ${COLORS.gold}33` }}>
+        <h3 style={{ ...S.subheading, marginBottom: 16 }}>FLEXIBILITY BY DESIGN</h3>
+        <div style={{ display: 'grid', gap: 16 }}>
+          {[
+            { q: 'What if I want to switch tiers?', a: 'Move freely between models at any quarterly decision point. Start monthly, shift to quarterly. Go from quarterly to ongoing. Step back to single sessions. Your engagement matches your season.' },
+            { q: 'What if I need to pause?', a: 'Life happens. Ongoing members can pause for up to 60 days with no penalty. Your progress data and assessment history are always preserved.' },
+            { q: 'Do you work with couples?', a: 'Partner sessions are built into the monthly and quarterly tiers. Both partners can also take the assessment independently and use the comparison mode to frame the conversation.' },
+            { q: 'Is this therapy?', a: 'No. This is coaching built on a diagnostic assessment. If clinical support is needed, I will refer you to licensed professionals. The two can work in parallel.' },
+          ].map((item, i) => (
+            <div key={i} style={{ borderLeft: `2px solid ${COLORS.gold}33`, paddingLeft: 16 }}>
+              <p style={{ fontFamily: FONTS.heading, fontWeight: 600, color: COLORS.text, fontSize: 14, marginBottom: 4 }}>{item.q}</p>
+              <p style={{ fontFamily: FONTS.body, color: COLORS.secondary, fontSize: 14, lineHeight: 1.6, margin: 0 }}>{item.a}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div style={{
+        background: COLORS.surface, borderRadius: 12, padding: 32, margin: '32px 0 80px',
+        borderLeft: `3px solid ${COLORS.gold}`, textAlign: 'center',
+      }}>
+        <p style={{ fontFamily: FONTS.display, fontStyle: 'italic', fontSize: 22, color: COLORS.text, lineHeight: 1.5, marginBottom: 20 }}>
+          "The assessment is the mirror. The coaching is the architecture."
+        </p>
+        <button onClick={() => navigate('assessment')} style={S.buttonGhost}>
+          Take the Assessment First
+        </button>
+      </div>
+    </div>
+  );
+
+  // ============================================================================
   // VIEW ROUTER
   // ============================================================================
   const renderView = () => {
@@ -1954,6 +2296,8 @@ export default function ConsciousHusbandAssessment() {
       case 'progress': return ProgressView;
       case 'daily': return DailyView;
       case 'guide': return GuideView;
+      case 'resources': return ResourcesView;
+      case 'services': return ServicesView;
       case 'about': return AboutView;
       default: return LandingView;
     }
