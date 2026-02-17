@@ -1929,21 +1929,41 @@ export default function ConsciousHusbandAssessment() {
     <div style={S.container}>
       <div style={{ padding: '48px 0 0', textAlign: 'center' }}>
         <p style={{ ...S.label, color: COLORS.gold, letterSpacing: 6, marginBottom: 16 }}>ABOUT</p>
-        <h1 style={{ ...S.heading, fontSize: 32, marginBottom: 8 }}>The Origin Story</h1>
+        <h1 style={{ ...S.heading, fontSize: 32, marginBottom: 8 }}>Interior Architecture, Applied</h1>
         <hr style={{ ...S.goldLine, maxWidth: 80, margin: '24px auto' }} />
       </div>
 
       <div style={{ ...S.cardGold }}>
-        <h3 style={{ ...S.heading, fontSize: 22, marginBottom: 16 }}>How This Assessment Came to Be</h3>
+        <h3 style={{ ...S.heading, fontSize: 22, marginBottom: 16 }}>The Same Framework. A Different Structure.</h3>
         <p style={{ fontFamily: FONTS.body, color: COLORS.text, fontSize: 16, lineHeight: 1.8, marginBottom: 16 }}>
-          It started with a viral thread. Helen Casanova posted a list of behaviors women observe in their husbands  -- things that silently erode attraction. It hit 3.4 million views. The comments were a war zone: men defensive, women validated, everyone talking past each other.
+          The Interior Architecture of Transformation was built to map the invisible structures that drive human behavior in organizations: the beliefs, defaults, and unconscious patterns that shape how leaders show up in systems. It works because it names what people already feel but cannot articulate.
         </p>
         <p style={{ fontFamily: FONTS.body, color: COLORS.text, fontSize: 16, lineHeight: 1.8, marginBottom: 16 }}>
-          The problem wasn't the content. The content was largely accurate. The problem was the frame: accusatory, gendered, and designed to produce shame rather than change. What if you could take the same observations and run them through a both/and analysis? What if, instead of blame, you offered a diagnostic mirror?
+          This assessment applies that same diagnostic lens to a different structure: the role of husband. The architecture is identical. Awareness precedes agency. Agency precedes architecture. And the spiral means you revisit each layer with deeper understanding every time through. You do not arrive at conscious partnership. You practice it, lose it, recover it, and deepen it. That is the spiral.
         </p>
         <p style={{ fontFamily: FONTS.body, color: COLORS.text, fontSize: 16, lineHeight: 1.8 }}>
-          That's what this assessment is. It takes 8 behaviors that research and real-world observation confirm matter  -- and instead of shaming men for where they fall short, it categorizes, names, and provides a path forward. Because choice is the alpha. Not the unconscious reactivity of the everyday.
+          The 8 behaviors in this assessment are not a checklist. They are dimensions of a relationship's interior architecture. Each one operates on a spectrum from unconscious default to conscious strength. Each one is shaped by socialization, reinforced by habit, and changeable through practice. The assessment surfaces where you are. The habit-stacking system gives you a path to where you want to be. The spiral keeps you honest about the distance between the two.
         </p>
+      </div>
+
+      <div style={S.card}>
+        <h3 style={{ ...S.subheading, marginBottom: 16 }}>THE SPIRAL</h3>
+        <p style={{ fontFamily: FONTS.body, color: COLORS.text, fontSize: 16, lineHeight: 1.8, marginBottom: 20 }}>
+          Growth in relationships is not linear. You will score well in a behavior one month and regress the next. Stress, fatigue, competing demands, and old programming pull you back toward defaults. The spiral model accounts for this. Every reassessment captures where you are now, not where you should be. The trend line matters more than any single score. Movement matters more than position.
+        </p>
+        <div style={{ display: 'grid', gap: 16 }}>
+          {[
+            { label: 'Awareness', value: 'The assessment surfaces what is already happening. You cannot change patterns you cannot see. This is the diagnostic mirror.' },
+            { label: 'Agency', value: 'Habit-stacking action plans give you specific, routine-anchored practices. Agency is not willpower. It is design.' },
+            { label: 'Architecture', value: 'Partner practices and ongoing coaching build the relational systems that sustain change beyond motivation. Architecture outlasts intention.' },
+            { label: 'The Return', value: 'Monthly reassessment brings you back through the spiral with sharper vision. What you missed the first time becomes visible the second. That is how transformation compounds.' },
+          ].map((item, i) => (
+            <div key={i} style={{ borderLeft: `2px solid ${COLORS.gold}33`, paddingLeft: 16 }}>
+              <p style={{ ...S.label, color: COLORS.gold, fontSize: 10, marginBottom: 4 }}>{item.label}</p>
+              <p style={{ fontFamily: FONTS.body, color: COLORS.text, fontSize: 14, lineHeight: 1.7, margin: 0 }}>{item.value}</p>
+            </div>
+          ))}
+        </div>
       </div>
 
       <div style={S.card}>
@@ -1952,10 +1972,10 @@ export default function ConsciousHusbandAssessment() {
           {[
             { label: 'Dimensions', value: '8 behavior categories mapped from relationship research and clinical observation' },
             { label: 'Scoring', value: '4-tier system: Conscious Strength (13-15), Emerging Awareness (10-12), Unconscious Default (6-9), Active Blind Spot (3-5)' },
-            { label: 'Profiles', value: '32 named profiles  -- 4 tiers across 8 behaviors  -- each with narrative, not just a number' },
-            { label: 'Action System', value: 'Habit-stacking methodology  -- new behaviors attached to existing daily routines for maximum adoption' },
+            { label: 'Profiles', value: '32 named profiles across 4 tiers and 8 behaviors. Each profile carries a narrative, not just a number.' },
+            { label: 'Action System', value: 'Habit-stacking methodology. New behaviors attached to existing daily routines for maximum adoption.' },
             { label: 'Partner Integration', value: 'Practices designed for real-world couples, not therapy homework. Built on reciprocity, not prescription.' },
-            { label: 'Archetypes', value: '5 overall profiles based on category distribution, not raw totals  -- pattern recognition over point counting' },
+            { label: 'Archetypes', value: '5 overall profiles based on category distribution, not raw totals. Pattern recognition over point counting.' },
           ].map((item, i) => (
             <div key={i} style={{ borderLeft: `2px solid ${COLORS.gold}33`, paddingLeft: 16 }}>
               <p style={{ ...S.label, color: COLORS.gold, fontSize: 10, marginBottom: 4 }}>{item.label}</p>
@@ -1969,23 +1989,31 @@ export default function ConsciousHusbandAssessment() {
         <h3 style={{ ...S.subheading, marginBottom: 16 }}>THE AUTHOR</h3>
         <h2 style={{ ...S.heading, fontSize: 26, marginBottom: 4 }}>Joshua Fraser, Ed.D.</h2>
         <p style={{ color: COLORS.gold, fontFamily: FONTS.label, fontWeight: 500, fontSize: 13, marginBottom: 16 }}>
-          Director of Educational Equity, Brooklyn Center Community Schools
+          Creator, Interior Architecture of Transformation
         </p>
         <p style={{ fontFamily: FONTS.body, color: COLORS.text, fontSize: 16, lineHeight: 1.8, marginBottom: 16 }}>
-          Creator of the Interior Architecture of Transformation book series and assessment suite. Joshua builds diagnostic tools that map the invisible structures  -- the beliefs, habits, and unconscious patterns  -- that drive human behavior in relationships, leadership, and organizational systems.
+          Joshua builds diagnostic instruments that map the invisible structures driving human behavior. The Interior Architecture framework has been applied to educational equity, organizational leadership, and strategic planning across school districts nationwide. This assessment extends that same practice to the most personal system most men will ever operate in: their marriage.
         </p>
         <p style={{ fontFamily: FONTS.body, color: COLORS.text, fontSize: 16, lineHeight: 1.8 }}>
-          The Conscious Husband Assessment is part of the Interior Architecture ecosystem: a collection of instruments designed to make the unconscious conscious, the invisible visible, and the default intentional.
+          The work is the same everywhere. Name the unconscious patterns. Categorize them without shame. Attach new behaviors to existing routines. Build structures that hold when motivation fades. The only thing that changes is the domain.
         </p>
       </div>
 
       <div style={{
-        background: COLORS.surface, borderRadius: 12, padding: 32, margin: '24px 0 80px',
+        background: COLORS.surface, borderRadius: 12, padding: 32, margin: '24px 0 40px',
         borderLeft: `3px solid ${COLORS.gold}`, textAlign: 'center',
       }}>
         <p style={{ fontFamily: FONTS.display, fontStyle: 'italic', fontSize: 24, color: COLORS.text, lineHeight: 1.5, margin: 0 }}>
           "Choice Is the Alpha.<br />Not the Unconscious Reactivity of the Everyday."
         </p>
+      </div>
+
+      <div style={{ textAlign: 'center', paddingBottom: 80 }}>
+        <p style={{ ...S.label, fontSize: 10, color: COLORS.muted, marginBottom: 16 }}>PART OF THE INTERIOR ARCHITECTURE ECOSYSTEM</p>
+        <a href="https://interior-architecture-six.vercel.app" target="_blank" rel="noopener noreferrer"
+          style={{ ...S.buttonGhost, textDecoration: 'none', display: 'inline-block' }}>
+          Explore Interior Architecture
+        </a>
       </div>
     </div>
   );
@@ -1997,39 +2025,39 @@ export default function ConsciousHusbandAssessment() {
     {
       category: 'Books',
       items: [
-        { title: 'Hold Me Tight', author: 'Dr. Sue Johnson', desc: 'The science of emotional bonding and attachment in adult relationships. The foundation for understanding why connection breaks down and how to repair it.' },
-        { title: 'The Seven Principles for Making Marriage Work', author: 'Dr. John Gottman', desc: 'Decades of research distilled into actionable principles. Gottman can predict divorce with 94% accuracy. This book shows you what the successful couples do differently.' },
-        { title: 'No More Mr. Nice Guy', author: 'Dr. Robert Glover', desc: 'For men who have built their identity around accommodation and people-pleasing. Directly relevant to Frame, Grievances, and Emotional Leadership.' },
-        { title: 'Atomic Habits', author: 'James Clear', desc: 'The science behind the habit-stacking methodology used in this assessment. If you want to understand why "trigger + action" works, start here.' },
-        { title: 'The Way of the Superior Man', author: 'David Deida', desc: 'Polarizing but valuable. Explores masculine purpose, presence, and the tension between comfort and growth. Directly relevant to Purpose and Frame.' },
-        { title: 'Mating in Captivity', author: 'Esther Perel', desc: 'Why desire fades in long-term relationships and what to do about it. Challenges the idea that security and passion naturally coexist.' },
-        { title: 'Nonviolent Communication', author: 'Marshall Rosenberg', desc: 'The communication framework underneath Listening, Grievances, and Emotional Leadership. Learn to express needs without blame.' },
-        { title: 'Running on Empty', author: 'Dr. Jonice Webb', desc: 'Childhood emotional neglect and its impact on adult relationships. If you scored low on Emotional Leadership, this book will show you why.' },
+        { title: 'Hold Me Tight', author: 'Dr. Sue Johnson', url: 'https://www.amazon.com/Hold-Me-Tight-Conversations-Lifetime/dp/031611300X', desc: 'The science of emotional bonding and attachment in adult relationships. The foundation for understanding why connection breaks down and how to repair it.' },
+        { title: 'The Seven Principles for Making Marriage Work', author: 'Dr. John Gottman', url: 'https://www.amazon.com/Seven-Principles-Making-Marriage-Work/dp/0553447718', desc: 'Decades of research distilled into actionable principles. Gottman can predict divorce with 94% accuracy. This book shows you what the successful couples do differently.' },
+        { title: 'No More Mr. Nice Guy', author: 'Dr. Robert Glover', url: 'https://www.amazon.com/No-More-Mr-Nice-Guy/dp/0762415339', desc: 'For men who have built their identity around accommodation and people-pleasing. Directly relevant to Frame, Grievances, and Emotional Leadership.' },
+        { title: 'Atomic Habits', author: 'James Clear', url: 'https://www.amazon.com/Atomic-Habits-Proven-Build-Break/dp/0735211299', desc: 'The science behind the habit-stacking methodology used in this assessment. If you want to understand why "trigger + action" works, start here.' },
+        { title: 'The Way of the Superior Man', author: 'David Deida', url: 'https://www.amazon.com/Way-Superior-Man-Challenges-Anniversary/dp/1622038320', desc: 'Polarizing but valuable. Explores masculine purpose, presence, and the tension between comfort and growth. Directly relevant to Purpose and Frame.' },
+        { title: 'Mating in Captivity', author: 'Esther Perel', url: 'https://www.amazon.com/Mating-Captivity-Unlocking-Erotic-Intelligence/dp/0060753641', desc: 'Why desire fades in long-term relationships and what to do about it. Challenges the idea that security and passion naturally coexist.' },
+        { title: 'Nonviolent Communication', author: 'Marshall Rosenberg', url: 'https://www.amazon.com/Nonviolent-Communication-Language-Life-Changing-Relationships/dp/189200528X', desc: 'The communication framework underneath Listening, Grievances, and Emotional Leadership. Learn to express needs without blame.' },
+        { title: 'Running on Empty', author: 'Dr. Jonice Webb', url: 'https://www.amazon.com/Running-Empty-Overcome-Childhood-Emotional/dp/161448242X', desc: 'Childhood emotional neglect and its impact on adult relationships. If you scored low on Emotional Leadership, this book will show you why.' },
       ],
     },
     {
       category: 'Research & Articles',
       items: [
-        { title: 'The Four Horsemen of the Apocalypse', author: 'The Gottman Institute', desc: 'Criticism, contempt, defensiveness, and stonewalling. Learn to recognize the patterns that predict relationship failure.' },
-        { title: 'Attachment Theory in Adult Relationships', author: 'Dr. Amir Levine & Rachel Heller', desc: 'Understanding anxious, avoidant, and secure attachment styles. Your attachment style shapes every behavior in this assessment.' },
-        { title: 'The Still Face Experiment', author: 'Dr. Edward Tronick', desc: 'A powerful demonstration of what happens when presence disappears. Watch this if you scored low on Presence.' },
-        { title: 'Emotional Labor: The Invisible Work', author: 'Gemma Hartley', desc: 'Understanding the mental load and emotional labor dynamic. Essential context for Emotional Leadership and Grievances.' },
+        { title: 'The Four Horsemen of the Apocalypse', author: 'The Gottman Institute', url: 'https://www.gottman.com/blog/the-four-horsemen-recognizing-criticism-contempt-defensiveness-and-stonewalling/', desc: 'Criticism, contempt, defensiveness, and stonewalling. Learn to recognize the patterns that predict relationship failure.' },
+        { title: 'Attached: The New Science of Adult Attachment', author: 'Dr. Amir Levine & Rachel Heller', url: 'https://www.amazon.com/Attached-Science-Adult-Attachment-YouFind/dp/1585429139', desc: 'Understanding anxious, avoidant, and secure attachment styles. Your attachment style shapes every behavior in this assessment.' },
+        { title: 'The Still Face Experiment', author: 'Dr. Edward Tronick', url: 'https://www.youtube.com/watch?v=apzXGEbZht0', desc: 'A powerful demonstration of what happens when presence disappears. Watch this if you scored low on Presence.' },
+        { title: 'Fed Up: Emotional Labor, Women, and the Way Forward', author: 'Gemma Hartley', url: 'https://www.amazon.com/Fed-Up-Emotional-Women-Forward/dp/0062855980', desc: 'Understanding the mental load and emotional labor dynamic. Essential context for Emotional Leadership and Grievances.' },
       ],
     },
     {
       category: 'Podcasts & Talks',
       items: [
-        { title: 'Where Should We Begin?', author: 'Esther Perel', desc: 'Real couples therapy sessions. Hearing other couples navigate the exact patterns this assessment measures is transformative.' },
-        { title: 'The Art of Manliness', author: 'Brett McKay', desc: 'Practical episodes on purpose, standards, frame, and what it means to be a man building something with intention.' },
-        { title: 'Brene Brown on Vulnerability', author: 'TED Talk', desc: 'The talk that reframed vulnerability as strength, not weakness. Essential for men working on Emotional Leadership and Grievances.' },
+        { title: 'Where Should We Begin?', author: 'Esther Perel', url: 'https://www.estherperel.com/podcast', desc: 'Real couples therapy sessions. Hearing other couples navigate the exact patterns this assessment measures is transformative.' },
+        { title: 'The Art of Manliness', author: 'Brett McKay', url: 'https://www.artofmanliness.com/podcast/', desc: 'Practical episodes on purpose, standards, frame, and what it means to be a man building something with intention.' },
+        { title: 'The Power of Vulnerability', author: 'Brene Brown, TED Talk', url: 'https://www.ted.com/talks/brene_brown_the_power_of_vulnerability', desc: 'The talk that reframed vulnerability as strength, not weakness. Essential for men working on Emotional Leadership and Grievances.' },
       ],
     },
     {
       category: 'Tools & Practices',
       items: [
-        { title: 'The Gottman Card Decks App', author: 'The Gottman Institute', desc: 'Free app with conversation starters, date questions, and relationship-building exercises. A practical companion to the Partner Practices in this assessment.' },
-        { title: 'Insight Timer', author: 'Meditation App', desc: 'Free meditation and mindfulness app. Start with 5 minutes daily. Directly supports Presence and Emotional Leadership.' },
-        { title: 'Morning Pages', author: 'Julia Cameron', desc: 'Write three pages longhand every morning. No editing, no stopping. A powerful practice for men who struggle to identify what they feel.' },
+        { title: 'The Gottman Card Decks App', author: 'The Gottman Institute', url: 'https://www.gottman.com/couples/apps/', desc: 'Free app with conversation starters, date questions, and relationship-building exercises. A practical companion to the Partner Practices in this assessment.' },
+        { title: 'Insight Timer', author: 'Meditation App', url: 'https://insighttimer.com/', desc: 'Free meditation and mindfulness app. Start with 5 minutes daily. Directly supports Presence and Emotional Leadership.' },
+        { title: 'Morning Pages', author: 'Julia Cameron', url: 'https://juliacameronlive.com/basic-tools/morning-pages/', desc: 'Write three pages longhand every morning. No editing, no stopping. A powerful practice for men who struggle to identify what they feel.' },
       ],
     },
   ];
@@ -2049,15 +2077,22 @@ export default function ConsciousHusbandAssessment() {
         <div key={si}>
           <h3 style={{ ...S.subheading, marginTop: si === 0 ? 16 : 40, marginBottom: 16 }}>{section.category.toUpperCase()}</h3>
           {section.items.map((item, i) => (
-            <div key={i} style={{ ...S.card, padding: 22 }}>
-              <h4 style={{ fontFamily: FONTS.heading, fontWeight: 600, color: COLORS.text, fontSize: 16, marginBottom: 2 }}>
-                {item.title}
-              </h4>
+            <a key={i} href={item.url} target="_blank" rel="noopener noreferrer"
+              style={{ ...S.card, padding: 22, display: 'block', textDecoration: 'none', border: `1px solid ${COLORS.elevated}`, transition: 'border-color 0.2s', cursor: 'pointer' }}
+              onMouseEnter={e => e.currentTarget.style.borderColor = COLORS.gold + '66'}
+              onMouseLeave={e => e.currentTarget.style.borderColor = COLORS.elevated}
+            >
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
+                <h4 style={{ fontFamily: FONTS.heading, fontWeight: 600, color: COLORS.text, fontSize: 16, marginBottom: 2 }}>
+                  {item.title}
+                </h4>
+                <span style={{ color: COLORS.muted, fontSize: 12, flexShrink: 0, marginLeft: 12 }}>{'\u2197'}</span>
+              </div>
               <p style={{ ...S.label, fontSize: 10, color: COLORS.gold, marginBottom: 10 }}>{item.author}</p>
               <p style={{ fontFamily: FONTS.body, color: COLORS.secondary, fontSize: 14, lineHeight: 1.7, margin: 0 }}>
                 {item.desc}
               </p>
-            </div>
+            </a>
           ))}
         </div>
       ))}
